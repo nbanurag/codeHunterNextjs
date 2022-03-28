@@ -20,6 +20,7 @@ const Slug = (props) => {
 export default Slug; 
 
 export async function getServerSideProps(context) {
+  console.log(process.env.API_URL, 'ttttttttttttttt', `${process.env.API_URL}/api/getblog?slug=${context.query.slug}`);
   const jsonfile = await fetch(`${process.env.API_URL}/api/getblog?slug=${context.query.slug}`);
   const blogData = await jsonfile.json();
   return { props: { blogData } }
