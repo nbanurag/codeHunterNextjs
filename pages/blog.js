@@ -16,7 +16,7 @@ const Blog = (props) => {
       <div className={styles.blogItem}>
         {blogsData.map(blog => (
           <div key={blog.slug}>
-            <Link href={"/blogpost/" + blog.slug}            >
+            <Link href={"/blogpost/" + blog.slug}  passHref>
               <h3 style={{cursor: 'pointer'}}>{blog.title}</h3>
             </Link>
             <p className={styles.blogPara}>{blog.content.substring(0, 140)}...</p>
