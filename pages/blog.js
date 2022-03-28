@@ -28,7 +28,7 @@ const Blog = (props) => {
 
 //getServerSideProps
 export async function getServerSideProps(context) {
-  const jsonfile = await fetch(`http://${context.req.headers.host}/api/blogs`);
+  const jsonfile = await fetch(`${process.env.API_URL}/api/blogs`);
   const blogsData = await jsonfile.json();
   return { props: { blogsData } }
 }
