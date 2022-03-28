@@ -18,7 +18,7 @@ export default function Home() {
           Hunting Coder
         </h1>
         <div className={styles.codeimg}>
-          <Image className={styles.homeImg} src="/homeImg.jpg" width={500} height={300} ></Image>
+          <Image alt="developer" className={styles.homeImg} src="/homeImg.jpg" width={500} height={300} ></Image>
         </div>
         <p className={styles.description}>
           A blog for hunting coders by a hunting coder
